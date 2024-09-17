@@ -1,0 +1,146 @@
+/* To use the alternative box model for all of your elements 
+(which is a common choice among developers), set the box-sizing property on the <html> 
+element and set all other elements to inherit that value: */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Ariel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200px;
+  font-style: normal;
+  background-color: rgb(226, 226, 226);
+}
+
+nav {
+  border-bottom: 1px solid black;
+
+  /* position: fixed; on nav: When you apply position: fixed; to the nav element, 
+  it removes the element from the normal document flow, which could cause other 
+  elements (like your paragraph) to overlap with it. */
+
+  display: flex; /* Use flexbox to align items */
+  justify-content: space-between;
+
+  /* Adjust height as needed */
+  position: fixed;
+  width: 100%;
+
+  background-color: lightcyan;
+}
+
+ul,
+li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  border: 1px solid red;
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#main-topic {
+  text-align: center;
+  padding: 8% 8%;
+  color: white;
+}
+
+#div_main-topic_conatiner {
+  display: flex;
+  width: 100%; /* Ensure it takes the full width */
+  justify-content: center; /* This centers the content */
+  align-items: center;
+  background: linear-gradient(90deg, #a7bfe8, #6190e8);
+}
+
+.image_of_Steel {
+  height: auto; /* Maintain aspect ratio */
+  flex: 1; /* Sets the image size */
+  max-width: 50%;
+  border: 2px solid rgb(255, 0, 0);
+}
+/* This causes the <section> element to become a flex container and its children become flex items. */
+.flex_container_main {
+  width: 90%;
+  /* height: 500px; */
+  margin: 0 auto;
+
+  border: 1px solid #00d5ff;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 11em;
+  margin-bottom: 11em;
+
+  /* flex-wrap: wrap; */
+}
+
+.flex_item_article1 {
+  /*  The flex-grow CSS property sets the flex grow factor, 
+  which specifies how much of the flex container's positive free space, if any,
+  should be assigned to the flex item's main size.
+  flex-grow: 1;
+
+  he flex-shrink CSS property sets the flex shrink factor of a flex item. If the size of all flex items is larger than the flex container, the flex items can shrink to fit according to their flex-shrink value. Each flex line's negative free space is distributed between the line's flex items that have a flex-shrink value greater than 0.
+  flex-shrink: 1;
+
+  The flex-basis CSS property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with box-sizing.
+  flex-basis: 13%; */
+
+  /* SHORTHAND */
+  flex: 2;
+  margin-top: 2em;
+  margin-right: 2em;
+  margin-left: 2em;
+}
+
+/*  The flex-grow CSS property sets the flex grow factor, 
+    which specifies how much of the flex container's positive free space, if any,
+    should be assigned to the flex item's main size.
+    flex-grow: 1;
+  
+    he flex-shrink CSS property sets the flex shrink factor of a flex item. If the size of all flex items is larger than the flex container, the flex items can shrink to fit according to their flex-shrink value. Each flex line's negative free space is distributed between the line's flex items that have a flex-shrink value greater than 0.
+    flex-shrink: 1;
+  
+    The flex-basis CSS property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with box-sizing.
+    flex-basis: 13%; */
+
+/* SHORTHAND */
+/* flex: 2 1 60%;
+  margin-left: 3em;
+  margin-right: 3em; */
+
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color: #abbaba;
+  color: #000;
+}
+
+.css_images1 {
+  flex: 1;
+}
+
+.css_images2 {
+  flex: 2;
+  /* flex: 1 1 50%; */
+}
+
+.css_images3 {
+  flex: 1;
+}
